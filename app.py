@@ -7,3 +7,20 @@ from tkinter import *                                        # pip install tkint
 import customtkinter as ctk                                  # pip install customtkinter==4.6.3
 from PIL import Image ,ImageTk                               # pip install pillow==9.3.0
 from tkinter.messagebox import showerror, showinfo
+
+class NotePad :
+
+    def __init__(self) :
+        ctk.set_appearance_mode( "dark" )
+        ctk.set_default_color_theme( "dark-blue" )
+        self.width = 1200
+        self.height = 700
+        self.root = ctk.CTk()
+        self.root.title( "NotePad GUI" )
+        self.root.geometry( "1200x700+200+80" )
+        self.root.resizable( False, False )
+
+if __name__ == "__main__" :
+
+    notepad_class = NotePad()
+    notepad_class.firstPage()
