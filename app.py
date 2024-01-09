@@ -29,6 +29,12 @@ class NotePad :
                                 borderwidth = 0 )
         first_page.pack( fill = "both", expand = True )
 
+        # Heading
+        first_page.create_text( 300, 170, text = "Note", 
+                                font = ( "Georgia", 60, "bold" ), fill = "#a7a8ac" )
+        first_page.create_text( 390, 280, text = "Pad", 
+                                font = ( "Georgia", 60, "bold" ), fill = "#e3e3e3" )
+
         self.root.mainloop()
 
 if __name__ == "__main__" :
