@@ -34,6 +34,16 @@ class NotePad :
                                 font = ( "Georgia", 60, "bold" ), fill = "#a7a8ac" )
         first_page.create_text( 390, 280, text = "Pad", 
                                 font = ( "Georgia", 60, "bold" ), fill = "#e3e3e3" )
+        
+        # Next Page Button
+        next_bt = ctk.CTkButton( master = first_page,
+                                  text = "Let's  Go  ->", text_font = ( "Georgia", 23 ),
+                                   width = 120, height = 50, corner_radius = 14,
+                                    bg_color = "#0d0d0d", fg_color = "red",
+                                     hover_color = "#ff5359", border_width = 0,
+                                      text_color = "white",
+                                       command = lambda : self.change( first_page, self.notesPage ) )
+        next_bt_win = first_page.create_window( 190, 640, anchor = "nw", window = next_bt )
 
         self.root.mainloop()
 
