@@ -20,6 +20,12 @@ class NotePad :
         self.root.geometry( "1200x700+200+80" )
         self.root.resizable( False, False )
     
+    def change( self, can, page) :
+
+        # Switching canvas
+        can.destroy()
+        page()
+    
     def firstPage(self) :
 
         # Defining Structure
