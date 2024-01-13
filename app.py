@@ -26,6 +26,17 @@ class NotePad :
         can.destroy()
         page()
     
+    def notesPage(self) :
+
+        # Defining Structure
+        notes_page = Canvas( self.root, 
+                              width = self.width, height = self.height, 
+                               bg = "black", highlightcolor = "#3c5390", 
+                                borderwidth = 0 )
+        notes_page.pack( fill = "both", expand = True )
+
+        self.root.mainloop()
+
     def firstPage(self) :
 
         # Defining Structure
