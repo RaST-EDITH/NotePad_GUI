@@ -35,6 +35,10 @@ class NotePad :
                                 borderwidth = 0 )
         notes_page.pack( fill = "both", expand = True )
 
+        # Heading
+        notes_page.create_text( 700, 120, text = "Notes", 
+                                font = ( "Georgia", 45, "bold" ), fill = "#1c54df" )
+
         self.root.mainloop()
 
     def firstPage(self) :
