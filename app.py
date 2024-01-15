@@ -38,6 +38,15 @@ class NotePad :
         # Heading
         notes_page.create_text( 700, 120, text = "Notes", 
                                 font = ( "Georgia", 45, "bold" ), fill = "#1c54df" )
+        
+        # Return Button
+        ret_bt = ctk.CTkButton( master = notes_page, 
+                                 text = "Back", text_font = ( "Georgia", 20 ), 
+                                  width = 100, height = 50, corner_radius = 18,
+                                   bg_color = "black", fg_color = "red", 
+                                    hover_color = "#ff5359", border_width = 0, 
+                                     command = lambda : self.change( notes_page, self.landingPage) )
+        ret_bt_win = notes_page.create_window( 30, 20, anchor = "nw", window = ret_bt )
 
         self.root.mainloop()
 
