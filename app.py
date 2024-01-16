@@ -54,6 +54,13 @@ class NotePad :
         box3_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5 )
         box3_back.place( x = 500+150-20, y = 200-50, anchor = "nw")
         
+        box3 = Text( notes_page, width = 26, height = 13 )
+        box3.place( x = 500+350-50, y = 200, anchor = "nw")
+
+        box4_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5 )
+        box4_back.place( x = 700+200+10, y = 200-50, anchor = "nw")
+
+        
         # Return Button
         ret_bt = ctk.CTkButton( master = notes_page, 
                                  text = "Back", text_font = ( "Georgia", 20 ), 
