@@ -19,6 +19,12 @@ class NotePad :
         self.root.title( "NotePad GUI" )
         self.root.geometry( "1200x700+200+80" )
         self.root.resizable( False, False )
+        self.boxes = []
+        self.path = os.path.join( os.getcwd(), r"Data_File\note_file.xlsx")
+        xl = pd.ExcelFile( self.path )
+        self.notes_sheet = pd.read_excel( xl )
+        self.column = self.notes_sheet.columns
+        self.row, self.col = self.notes_sheet.shape
     
     def change( self, can, page) :
 
@@ -89,8 +95,8 @@ class NotePad :
         
         self.boxes = [ box1, box2, box3, box4, box5, box6, box7, box8]
 
-        for i in range( row ) :
-            self.boxes[i].insert( "0.0", self.notes_sheet[column[1]][i] )
+        for i in range( self.row ) :
+            self.boxes[i].insert( "0.0", self.notes_sheet[self.column[1]][i] )
         
         # Save Button
         save_bt = ctk.CTkButton( master = notes_page, 
