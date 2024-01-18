@@ -91,6 +91,15 @@ class NotePad :
 
         for i in range( row ) :
             self.boxes[i].insert( "0.0", self.notes_sheet[column[1]][i] )
+        
+        # Save Button
+        save_bt = ctk.CTkButton( master = notes_page, 
+                                  text = "Save", text_font = ( "Georgia", 20 ), 
+                                   width = 100, height = 30, corner_radius = 18,
+                                    bg_color = "black", fg_color = "green", 
+                                     hover_color = "#ff5359", border_width = 0, 
+                                      command = self.saveNotes )
+        save_bt_win = notes_page.create_window( 730, 820, anchor = "nw", window = save_bt )
 
         # Return Button
         ret_bt = ctk.CTkButton( master = notes_page, 
