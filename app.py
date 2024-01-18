@@ -80,14 +80,17 @@ class NotePad :
 
         box7 = Text( notes_page, width = 26, height = 13 )
         box7.place( x = 500+350-50, y = 400+150-20, anchor = "nw")
-        
+
+        box8_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5 )
+        box8_back.place( x = 700+200+10, y = 400+100-86, anchor = "nw")
+
         # Return Button
         ret_bt = ctk.CTkButton( master = notes_page, 
                                  text = "Back", text_font = ( "Georgia", 20 ), 
                                   width = 100, height = 50, corner_radius = 18,
                                    bg_color = "black", fg_color = "red", 
                                     hover_color = "#ff5359", border_width = 0, 
-                                     command = lambda : self.change( notes_page, self.landingPage) )
+                                     command = lambda : self.change( notes_page, self.firstPage) )
         ret_bt_win = notes_page.create_window( 30, 20, anchor = "nw", window = ret_bt )
 
         self.root.mainloop()
