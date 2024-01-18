@@ -86,6 +86,11 @@ class NotePad :
 
         box8 = Text( notes_page, width = 26, height = 13 )
         box8.place( x = 700+500-50, y = 400+150-20, anchor = "nw")
+        
+        self.boxes = [ box1, box2, box3, box4, box5, box6, box7, box8]
+
+        for i in range( row ) :
+            self.boxes[i].insert( "0.0", self.notes_sheet[column[1]][i] )
 
         # Return Button
         ret_bt = ctk.CTkButton( master = notes_page, 
