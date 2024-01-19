@@ -39,6 +39,9 @@ class NotePad :
         try :
             wb.save( path )
             showinfo( title = "Done", message = "Changes Saved" )
+        
+        except :
+            showerror( title = "Open File", message = "Close File in Background")
 
     def notesPage(self) :
 
