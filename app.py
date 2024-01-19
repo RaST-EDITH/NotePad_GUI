@@ -25,7 +25,13 @@ class NotePad :
         # Switching canvas
         can.destroy()
         page()
-    
+
+    def saveNotes( self, boxes, sheet_pd, path ) :
+
+        # saving notes
+        wb = oxl.load_workbook( path )
+        sheet_xl = wb['Sheet1']
+
     def notesPage(self) :
 
         # Defining Structure
