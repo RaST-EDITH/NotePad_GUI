@@ -36,6 +36,10 @@ class NotePad :
             data = boxes[i].get("0.0", END )
             sheet_xl[f"B{i+2}"].value = data
 
+        try :
+            wb.save( path )
+            showinfo( title = "Done", message = "Changes Saved" )
+
     def notesPage(self) :
 
         # Defining Structure
