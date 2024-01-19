@@ -32,6 +32,10 @@ class NotePad :
         wb = oxl.load_workbook( path )
         sheet_xl = wb['Sheet1']
 
+        for i in range( len(boxes) ) :
+            data = boxes[i].get("0.0", END )
+            sheet_xl[f"B{i+2}"].value = data
+
     def notesPage(self) :
 
         # Defining Structure
