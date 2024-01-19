@@ -19,12 +19,6 @@ class NotePad :
         self.root.title( "NotePad GUI" )
         self.root.geometry( "1200x700+200+80" )
         self.root.resizable( False, False )
-        self.boxes = []
-        self.path = os.path.join( os.getcwd(), r"Data_File\note_file.xlsx")
-        xl = pd.ExcelFile( self.path )
-        self.notes_sheet = pd.read_excel( xl )
-        self.column = self.notes_sheet.columns
-        self.row, self.col = self.notes_sheet.shape
     
     def change( self, can, page) :
 
@@ -40,6 +34,11 @@ class NotePad :
                                bg = "black", highlightcolor = "#3c5390", 
                                 borderwidth = 0 )
         notes_page.pack( fill = "both", expand = True )
+
+        path = os.path.join( os.getcwd(), r"Data_File\note_file.xlsx")
+        notes_sheet = pd.read_excel( path )
+        column = notes_sheet.columns
+        row, col = notes_sheet.shape
 
         # Heading
         notes_page.create_text( 700, 120, text = "Notes", 
@@ -93,18 +92,18 @@ class NotePad :
         box8 = Text( notes_page, width = 26, height = 13 )
         box8.place( x = 700+500-50, y = 400+150-20, anchor = "nw")
         
-        self.boxes = [ box1, box2, box3, box4, box5, box6, box7, box8]
+        boxes = [ box1, box2, box3, box4, box5, box6, box7, box8]
 
-        for i in range( self.row ) :
-            self.boxes[i].insert( "0.0", self.notes_sheet[self.column[1]][i] )
-        
+        for i in range( row ) :
+            boxes[i].insert( "0.0", notes_sheet[column[1]][i] )
+
         # Save Button
         save_bt = ctk.CTkButton( master = notes_page, 
                                   text = "Save", text_font = ( "Georgia", 20 ), 
                                    width = 100, height = 30, corner_radius = 18,
                                     bg_color = "black", fg_color = "green", 
                                      hover_color = "#ff5359", border_width = 0, 
-                                      command = self.saveNotes )
+                                      command = lambda : self.saveNotes( boxes, notes_sheet, path ) )
         save_bt_win = notes_page.create_window( 730, 820, anchor = "nw", window = save_bt )
 
         # Return Button
