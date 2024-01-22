@@ -20,6 +20,13 @@ class NotePad :
         self.root.geometry( "1200x700+200+80" )
         self.root.resizable( False, False )
     
+    def Imgo( self, file, w, h) :
+
+        # Image processing
+        img = Image.open( file )
+        pht = ImageTk.PhotoImage( img.resize( (w,h), Image.Resampling.LANCZOS))
+        return pht
+
     def change( self, can, page) :
 
         # Switching canvas
