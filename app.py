@@ -16,6 +16,7 @@ class NotePad :
         self.width = 1200
         self.height = 700
         self.root = ctk.CTk()
+        self.root.iconbitmap( os.path.join( os.getcwd(), r"Design\notepad.ico" ))
         self.root.title( "NotePad GUI" )
         self.root.geometry( "1200x700+200+80" )
         self.root.resizable( False, False )
