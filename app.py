@@ -151,6 +151,10 @@ class NotePad :
                                 borderwidth = 0 )
         first_page.pack( fill = "both", expand = True )
 
+        # Background Image
+        back_image = self.Imgo( os.path.join( os.getcwd(), r"Design\firstPage.jpg" ), 1498, 875)
+        first_page.create_image( 0, 0, image = back_image , anchor = "nw")
+
         # Heading
         first_page.create_text( 300, 170, text = "Note", 
                                 font = ( "Georgia", 60, "bold" ), fill = "#a7a8ac" )
