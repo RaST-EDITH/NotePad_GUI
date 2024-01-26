@@ -156,10 +156,10 @@ class NotePad :
         first_page.create_image( 0, 0, image = back_image , anchor = "nw")
 
         # Heading
-        first_page.create_text( 300, 170, text = "Note", 
-                                font = ( "Georgia", 60, "bold" ), fill = "#a7a8ac" )
-        first_page.create_text( 390, 280, text = "Pad", 
-                                font = ( "Georgia", 60, "bold" ), fill = "#e3e3e3" )
+        first_page.create_text( 1140, 290, text = "Note", 
+                                font = ( "Georgia", 60, "bold" ), fill = "#5871b4" )
+        first_page.create_text( 1260, 400, text = "Pad", 
+                                font = ( "Georgia", 60, "bold" ), fill = "#232e66" )
         
         # Next Page Button
         next_bt = ctk.CTkButton( master = first_page,
