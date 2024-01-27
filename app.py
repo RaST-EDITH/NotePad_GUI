@@ -163,13 +163,13 @@ class NotePad :
         
         # Next Page Button
         next_bt = ctk.CTkButton( master = first_page,
-                                  text = "Let's  Go  ->", text_font = ( "Georgia", 23 ),
-                                   width = 120, height = 50, corner_radius = 14,
-                                    bg_color = "#0d0d0d", fg_color = "red",
+                                  text = "Let's  Note ➡", text_font = ( "Georgia", 20 ),
+                                   width = 80, height = 40, corner_radius = 14,
+                                    bg_color = "#f7f7f9", fg_color = "red",
                                      hover_color = "#ff5359", border_width = 0,
                                       text_color = "white",
                                        command = lambda : self.change( first_page, self.notesPage ) )
-        next_bt_win = first_page.create_window( 190, 640, anchor = "nw", window = next_bt )
+        next_bt_win = first_page.create_window( 1070, 600, anchor = "nw", window = next_bt )
 
         self.root.mainloop()
 
