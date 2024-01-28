@@ -53,10 +53,15 @@ class NotePad :
 
     def notesPage(self) :
 
+        back_color = "#f6f6f8"
+        frame_color = "#2b346d"
+        inner_color = "#b0bee5"
+        font = ( "Book Antiqua", 15, "bold")
+
         # Defining Structure
         notes_page = Canvas( self.root, 
                               width = self.width, height = self.height, 
-                               bg = "black", highlightcolor = "#3c5390", 
+                               bg = back_color, highlightcolor = "#3c5390", 
                                 borderwidth = 0 )
         notes_page.pack( fill = "both", expand = True )
 
