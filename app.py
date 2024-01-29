@@ -75,8 +75,8 @@ class NotePad :
         notes_page.create_image( 1350, 20, image = back_image , anchor = "nw")
 
         # Heading
-        notes_page.create_text( 700, 120, text = "Notes", 
-                                font = ( "Georgia", 45, "bold" ), fill = "#1c54df" )
+        notes_page.create_text( 760, 120, text = "Notes", 
+                                font = ( "Georgia", 45, "bold" ), fill = "#5871b4" )
 
         box1_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5 )
         box1_back.place( x = 100+50-80, y = 200-50, anchor = "nw")
