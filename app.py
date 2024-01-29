@@ -70,6 +70,10 @@ class NotePad :
         column = notes_sheet.columns
         row, col = notes_sheet.shape
 
+         # Background Image
+        back_image = self.Imgo( os.path.join( os.getcwd(), r"Design\secondPage.png" ), 80, 80)
+        notes_page.create_image( 1350, 20, image = back_image , anchor = "nw")
+
         # Heading
         notes_page.create_text( 700, 120, text = "Notes", 
                                 font = ( "Georgia", 45, "bold" ), fill = "#1c54df" )
