@@ -82,8 +82,9 @@ class NotePad :
                                      bg_color = back_color, fg_color = frame_color )
         box1_back.place( x = 70, y = 150, anchor = "nw")
         
-        box1 = Text( notes_page, width = 26, height = 13 )
-        box1.place( x = 100+50-50, y = 200, anchor = "nw")
+        box1 = Text( notes_page, width = 20, height = 9, font = font,
+                        background = inner_color, foreground = "white" )
+        box1.place( x = 100, y = 200, anchor = "nw")
 
         box2_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5 )
         box2_back.place( x = 300+130-80, y = 200-50, anchor = "nw")
