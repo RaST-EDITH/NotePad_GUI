@@ -138,8 +138,9 @@ class NotePad :
                                      bg_color = back_color, fg_color = frame_color )
         box8_back.place( x = 910, y = 414, anchor = "nw")
 
-        box8 = Text( notes_page, width = 26, height = 13 )
-        box8.place( x = 700+500-50, y = 400+150-20, anchor = "nw")
+        box8 = Text( notes_page, width = 20, height = 9, font = font,
+                        background = inner_color, foreground = "black"  )
+        box8.place( x = 1150, y = 530, anchor = "nw")
         
         boxes = [ box1, box2, box3, box4, box5, box6, box7, box8]
 
