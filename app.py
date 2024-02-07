@@ -123,7 +123,7 @@ class NotePad :
         box6_back.place( x = 350, y = 414, anchor = "nw")
         
         box6 = Text( notes_page, width = 20, height = 9, font = font,
-                        background = inner_color, foreground = "black"  )
+                        background = inner_color, foreground = "white"  )
         box6.place( x = 450, y = 530, anchor = "nw")
 
         box7_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5, 
@@ -131,7 +131,7 @@ class NotePad :
         box7_back.place( x = 630, y = 414, anchor = "nw")
 
         box7 = Text( notes_page, width = 20, height = 9, font = font,
-                        background = "white", foreground = "white" )
+                        background = "white", foreground = "black" )
         box7.place( x = 800, y = 530, anchor = "nw")
 
         box8_back = ctk.CTkTextbox( notes_page, width = 231.5, height = 231.5, 
@@ -139,7 +139,7 @@ class NotePad :
         box8_back.place( x = 910, y = 414, anchor = "nw")
 
         box8 = Text( notes_page, width = 20, height = 9, font = font,
-                        background = inner_color, foreground = "black"  )
+                        background = inner_color, foreground = "white"  )
         box8.place( x = 1150, y = 530, anchor = "nw")
         
         boxes = [ box1, box2, box3, box4, box5, box6, box7, box8]
